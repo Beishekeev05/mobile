@@ -1,10 +1,15 @@
 import React from "react";
-import SignIn from "./router/SignIn";
+
+import SignIn from "./router/SignUp";
+import SignUp from "./router/SignIn";
+import ForgotPassword from "./router/ForgotPassword";
 
 const App = () => {
 	return (
 		<div>
+			<SignUp />
 			<SignIn />
+			<ForgotPassword />
 		</div>
 	);
 };
