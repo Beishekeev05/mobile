@@ -90,8 +90,8 @@ const Block = styled(Box)(({ theme }) => ({
 	height: "50px",
 	[theme.breakpoints.down("sm")]: {
 		backgroundColor: "white",
-		width: "283px",
-		height: "350px",
+		width: "330px",
+		height: "390px",
 		boxShadow: " 0px 0px 19px 3px rgba(34, 60, 80, 0.2)",
 		margin: "0 auto",
 		display: "flex",
@@ -108,7 +108,7 @@ const Logo = styled(Box)(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		width: "200px",
 		height: "100px",
-		margin: "50px 0 25px 60px",
+		margin: "40px auto",
 
 		display: "flex",
 		flexDirection: "column",
@@ -157,13 +157,13 @@ const BlockTwo = styled(Box)(({ theme }) => ({
 	width: "300px",
 	height: "100px",
 	[theme.breakpoints.down("sm")]: {
-		width: "245px",
+		width: "285px",
 		height: "88px",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "center",
-		gap: "20px",
+		gap: "30px",
 		marginBottom: "15px",
 	},
 }));
@@ -172,7 +172,7 @@ const BlockThree = styled(Box)(({ theme }) => ({
 	width: "300px",
 	height: "100px",
 	[theme.breakpoints.down("sm")]: {
-		width: "221px",
+		width: "251px",
 		height: "127px",
 		display: "flex",
 		flexDirection: "column",
