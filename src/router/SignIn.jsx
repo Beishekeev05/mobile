@@ -13,7 +13,7 @@ import Gogle from "../assets/Gogle.svg";
 import log from "../assets/log.svg";
 import LogoTwo from "../assets/LogoTwo.svg";
 
-const SignUp = () => {
+const SignIn = () => {
 	return (
 		<Container>
 			<Logo>
@@ -74,7 +74,7 @@ const SignUp = () => {
 	);
 };
 
-export default SignUp;
+export default SignIn;
 
 const Container = styled(Box)(({ theme }) => ({
 	width: "100%",
