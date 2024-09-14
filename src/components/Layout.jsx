@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import { Box, TextField } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import MobileSideBar from "./MobileSideBar";
 
 export const Layout = () => {
 	return (
@@ -10,7 +11,7 @@ export const Layout = () => {
 				<SideBare />
 				<OutletBox>
 					<HeaderInput>
-						<Input placeholder="Поиск" />
+						<Input size="small" placeholder="Поиск" />
 					</HeaderInput>
 					<Outlet />
 				</OutletBox>
@@ -24,31 +25,14 @@ const SideBare = styled(Box)(({ theme }) => ({
 	width: "300px",
 	height: "100vh",
 	border: "1px solid black",
-	backgroundColor: "white",
 
 	[theme.breakpoints.down("sm")]: {
+		backgroundColor: "red",
 		width: "45px",
 		height: "45px",
 		position: "absolute",
 		top: "15px",
 		left: "20px",
-	},
-}));
-
-const MobileSideBar = styled(Box)(({ theme }) => ({
-	display: "none",
-
-	[theme.breakpoints.down("sm")]: {
-		display: "block",
-		width: "100%",
-		height: "90px",
-		border: "1px solid black",
-		position: "fixed",
-    backgroundColor:'red',
-		bottom: "0",
-		left: "0",
-		zIndex: 1000,
-		borderRadius: "",
 	},
 }));
 
