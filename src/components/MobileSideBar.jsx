@@ -9,22 +9,22 @@ const MobileSideBar = () => {
 	return (
 		<MobileSideBarStyled>
 			<Block>
-				<StyledNavLink>
+				<StyledNavLink to="/sigin">
 					<img src={user} alt="User" />
 				</StyledNavLink>
 			</Block>
 			<Block>
-				<StyledNavLink>
+				<StyledNavLink to="/main">
 					<img src={line} alt="Line" />
 				</StyledNavLink>
 			</Block>
 			<Block>
-				<StyledNavLink>
-					<img src={raiting} alt="Raiting" />
+				<StyledNavLink to="/about">
+					<img src={raiting} alt="Rating" />
 				</StyledNavLink>
 			</Block>
 			<Block>
-				<StyledNavLink>
+				<StyledNavLink to="/pay">
 					<img src={arrow} alt="Arrow" />
 				</StyledNavLink>
 			</Block>
@@ -41,43 +41,46 @@ const MobileSideBarStyled = styled(Box)(({ theme }) => ({
 		width: "100%",
 		height: "80px",
 		borderTop: "1px solid #ccc",
-		position: "fixed",
-		bottom: "0",
-		left: "0",
+		position: "sticky",
+		bottom: 0,
+		left: 0,
 		zIndex: 1000,
 		borderRadius: "7px 7px 0 0",
 		justifyContent: "space-evenly",
 		alignItems: "center",
 		backgroundColor: "#f9f9f9",
+		marginTop: "auto",
 	},
 }));
 
-const Block = styled(Box)(({ theme }) => ({
+const Block = styled(Box)(() => ({
 	width: "60px",
 	height: "60px",
 	display: "flex",
 	justifyContent: "center",
 	alignItems: "center",
-	transition: "background-color 0.3s",
+	transition: "background-color 0.3s ease",
 	borderRadius: "6px",
-	"&:hover": {
-		backgroundColor: "#e0e0e0",
-	},
 }));
 
-const StyledNavLink = styled(NavLink)(({ theme }) => ({
+const StyledNavLink = styled(NavLink)(() => ({
+	color: "inherit",
+	textDecoration: "none",
+	padding: "10px",
+	borderRadius: "4px",
 	display: "flex",
 	justifyContent: "center",
 	alignItems: "center",
-	textDecoration: "none",
+	transition: "background-color 0.3s ease, color 0.3s ease",
 	"& img": {
 		width: "24px",
 		height: "24px",
-		transition: "filter 0.3s",
+		transition: "filter 0.3s ease",
 	},
 	"&.active": {
+		backgroundColor: "#637E7E",
 		"& img": {
-			filter: "invert(100%)", // or other styles to highlight active state
+			filter: "brightness(0) invert(1)",
 		},
 	},
 }));
