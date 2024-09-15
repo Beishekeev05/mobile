@@ -34,6 +34,7 @@ const MobileSideBar = () => {
 
 export default MobileSideBar;
 
+// Стили для бокового меню
 const MobileSideBarStyled = styled(Box)(({ theme }) => ({
 	display: "none",
 	[theme.breakpoints.down("sm")]: {
@@ -45,14 +46,13 @@ const MobileSideBarStyled = styled(Box)(({ theme }) => ({
 		bottom: 0,
 		left: 0,
 		zIndex: 1000,
-		borderRadius: "7px 7px 0 0",
 		justifyContent: "space-evenly",
 		alignItems: "center",
 		backgroundColor: "#f9f9f9",
-		marginTop: "auto",
 	},
 }));
 
+// Блок с иконкой
 const Block = styled(Box)(() => ({
 	width: "60px",
 	height: "60px",
@@ -63,6 +63,7 @@ const Block = styled(Box)(() => ({
 	borderRadius: "6px",
 }));
 
+// Стили для NavLink
 const StyledNavLink = styled(NavLink)(() => ({
 	color: "inherit",
 	textDecoration: "none",
