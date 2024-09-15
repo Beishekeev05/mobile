@@ -82,6 +82,7 @@ const LayoutContainer = styled(Box)(({ theme }) => ({
 	height: "100%",
 	display: "flex",
 	paddingBottom: "60px",
+	position: "relative",
 }));
 
 const Input = styled(TextField)(({ theme }) => ({

@@ -41,7 +41,7 @@ const MobileSideBarStyled = styled(Box)(({ theme }) => ({
 		width: "100%",
 		height: "80px",
 		borderTop: "1px solid #ccc",
-		position: "sticky",
+		position: "fixed",
 		bottom: 0,
 		left: 0,
 		zIndex: 1000,
